@@ -1,4 +1,4 @@
-# Openmessaging-dledger-jepsen
+# dledger.jepsen
 
 A [jepsen](https://github.com/jepsen-io/jepsen) test for [dledger](https://github.com/openmessaging/openmessaging-storage-dledger).  
  
