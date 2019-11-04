@@ -1,0 +1,27 @@
+#
+# Licensed to the Apache Software Foundation (ASF) under one or more
+# contributor license agreements.  See the NOTICE file distributed with
+# this work for additional information regarding copyright ownership.
+# The ASF licenses this file to You under the Apache License, Version 2.0
+# (the "License"); you may not use this file except in compliance with
+# the License.  You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+
+FROM       jacobmbr/ubuntu-jepsen:v0.1.0
+
+RUN rm /etc/apt/apt.conf.d/docker-clean && apt-get update
+
+# Install Jepsen dependencies
+RUN apt-get install -y openssh-server \
+    curl faketime iproute2 iptables iputils-ping libzip4 \
+    logrotate man man-db net-tools ntpdate psmisc python rsyslog \
+    sudo unzip vim wget apt-transport-https \
+    && apt-get remove -y --purge --auto-remove systemd
