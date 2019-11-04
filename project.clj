@@ -21,5 +21,5 @@
   :dependencies [
                  [org.clojure/clojure "1.10.0"]
                  [jepsen "0.1.15-SNAPSHOT"]
-                 [io.openmessaging/dledger-jepsen "1.0-SNAPSHOT"]
+                 [io.openmessaging/dledger-jepsen "1.0.0-SNAPSHOT"]
                  ])
