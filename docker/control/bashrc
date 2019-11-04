@@ -1,0 +1,14 @@
+eval $(ssh-agent) &> /dev/null
+ssh-add /root/.ssh/id_rsa &> /dev/null
+
+cat <<EOF
+Welcome to Jepsen on Docker
+===========================
+
+To run a test:
+   1. control run dledger build
+   2. control run dledger deploy
+   3. ./run_test.sh
+EOF
+
+cd /jepsen

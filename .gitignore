@@ -1,0 +1,12 @@
+.idea/
+target/
+.classpath
+.project
+.settings/
+*.log*
+*.iml
+.DS_Store
+nohup.out
+store/
+*.tar.gz
+
